@@ -1,0 +1,438 @@
+/* ───────────────────────────────────────
+   components.css — reusable elements
+   ─────────────────────────────────────── */
+
+/* ── BUTTON ── */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--border-strong);
+}
+
+.btn--outline:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ── BADGE ── */
+.badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: var(--bg-alt);
+}
+
+.badge--gold {
+  border-color: rgba(184, 134, 11, 0.3);
+  color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.badge--accent {
+  border-color: rgba(0, 106, 78, 0.25);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ── STAT CARD ── */
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card__num {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-card__label {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* ── SOCIAL CARD ── */
+.social-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  transition: var(--transition);
+  min-height: 130px;  /* add this */
+}
+.social-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.social-card__icon {
+  color: var(--accent);
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.social-card__title {
+  font-size: 18px;  /* was 14px */
+  font-weight: 600;
+  color: var(--text);
+}
+
+.social-card__sub {
+  font-size: 16px;  /* was 12px */
+  color: var(--text-muted);
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: var(--transition);
+}
+
+
+.skill-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ── COURSE CARD ── */
+.course-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1rem;
+  font-size: 13px;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.course-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.course-card__dept {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.course-card__dept--math {
+  color: var(--gold);
+  background: var(--gold-soft);
+}
+
+.course-card__dept--misc {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+/* ── PROJECT CARD ── */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.project-card__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 1.1rem;
+  line-height: 1.6;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(0, 106, 78, 0.15);
+}
+
+/* ── CERT CARD ── */
+.cert-card__logo {
+  width: 192px;
+  height: 192px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+}
+
+.cert-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.cert-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.cert-card__icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.cert-card__title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.cert-card__issuer {
+  font-size: 24px;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cert-card__link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold);
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.cert-card__link:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold);
+}
+
+.project-card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.project-card__links a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+.project-card__links a:hover {
+  text-decoration: underline;
+}
+
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── LeetCode breakdown ── */
+.lc-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.lc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.lc-dot--easy   { background: #22c55e; }
+.lc-dot--medium { background: #f59e0b; }
+.lc-dot--hard   { background: #ef4444; }
+
+.lc-label {
+  color: var(--text-muted);
+  width: 52px;
+}
+
+.lc-count {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--text);
+}
+
+
+.skill-tag img {
+  width: 30px;  /* was 16px */
+  height: 30px;
+}
+
+/* ── EXPERIENCE CARD ── */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.experience-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.experience-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.experience-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.experience-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.experience-card__org {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.experience-card__date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.experience-card__bullets {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.experience-card__bullets li {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}

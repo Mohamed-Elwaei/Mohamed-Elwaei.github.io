@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Mohamed Elwaei</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Portfolio base styles -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+
+  <!-- Gallery-specific styles -->
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">ME<span>.</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#coursework">Coursework</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#certifications">Certs</a></li>
+      <li><a href="index.html#socials">Socials</a></li>
+      <li><a href="gallery.html" style="color: var(--accent);">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE -->
+  <div class="gallery-page">
+    <div class="container">
+
+      <div class="gallery-header">
+        <p class="section__label">08 — Gallery</p>
+        <h1 class="section__title">Photos & Videos</h1>
+      </div>
+
+      <!-- Albums injected here by gallery.js -->
+      <div id="albums-container">
+        <div class="loading-albums">
+          <div class="album-skeleton"></div>
+          <div class="album-skeleton"></div>
+          <div class="album-skeleton"></div>
+          <div class="album-skeleton"></div>
+          <div class="album-skeleton"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lb-close">✕</button>
+    <button class="lightbox__nav lightbox__prev" id="lb-prev">‹</button>
+    <div class="lightbox__inner" id="lb-inner"></div>
+    <button class="lightbox__nav lightbox__next" id="lb-next">›</button>
+    <div class="lightbox__info">
+      <div class="lightbox__album-name" id="lb-album"></div>
+      <div class="lightbox__counter"    id="lb-counter"></div>
+    </div>
+  </div>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>

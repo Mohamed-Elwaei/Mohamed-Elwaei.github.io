@@ -1,0 +1,52 @@
+/* ───────────────────────────────────────
+   variables.css — design tokens
+   ─────────────────────────────────────── */
+
+:root {
+  /* ── Surfaces ── */
+  --bg:          #ffffff;
+  --bg-alt:      #fafafa;
+  --bg-card:    #ffffff;
+  --bg-hover:    #f5f5f5;
+
+  /* ── Text ── */
+  --text:        #1a1a1a;
+  --text-muted:  #6b7280;
+  --text-light:  #9ca3af;
+
+  /* ── Borders ── */
+  --border:        #e5e7eb;
+  --border-strong: #d1d5db;
+
+  /* ── Accent colors ── */
+  --accent:       #006a4e;   /* USF green-ish, professional */
+  --accent-hover: #00533d;
+  --accent-soft:  #e6f2ed;
+
+  --gold:         #b8860b;
+  --gold-soft:    #fdf6e3;
+
+  /* ── Typography ── */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  /* ── Spacing ── */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 5rem;
+
+  /* ── Radius ── */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+
+  /* ── Transitions ── */
+  --transition: all 0.2s ease;
+}
