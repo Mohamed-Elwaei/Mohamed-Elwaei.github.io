@@ -59,6 +59,17 @@
     align-items: stretch;
   }
 
+  .hero__split {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .hero__photo {
+    width: 180px;
+    height: 180px;
+  }
+
   .btn {
     width: 100%;
   }
