@@ -58,10 +58,7 @@
     justify-content: center;
   }
 
-  .hero__photo {
-    width: 180px;
-    height: 180px;
-  }
+
 
   .hero__name {
     font-size: 2.5rem;
