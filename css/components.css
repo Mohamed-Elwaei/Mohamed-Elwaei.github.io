@@ -256,8 +256,8 @@
 
 /* ── CERT CARD ── */
 .cert-card__logo {
-  width: 192px;
-  height: 192px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
   flex-shrink: 0;
   border-radius: var(--radius-sm);
@@ -283,14 +283,14 @@
 }
 
 .cert-card__title {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
   color: var(--text);
   margin-bottom: 0.25rem;
 }
 
 .cert-card__issuer {
-  font-size: 24px;
+  font-size: 18px;
   color: var(--text-muted);
   margin-bottom: 0.75rem;
 }
