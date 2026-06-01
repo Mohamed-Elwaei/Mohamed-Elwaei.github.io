@@ -370,8 +370,24 @@
 
 
 .skill-tag img {
-  width: 30px;  /* was 16px */
-  height: 30px;
+  height: 25px;      /* fix the height */
+  width: auto;       /* let width scale naturally */
+  object-fit: contain;
+}
+
+.skill-tag {
+  display: inline-flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;      /* center both logo and text */
+  gap: 4px;                 /* space between logo and text */
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 0.6rem 0.85rem;  /* slightly more padding to give it room */
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  color: var(--text-muted)
 }
 
 /* ── EXPERIENCE CARD ── */
