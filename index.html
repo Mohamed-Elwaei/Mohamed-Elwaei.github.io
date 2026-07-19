@@ -337,6 +337,25 @@
       <h2 class="section__title">Projects</h2>
 
       <div class="projects-grid">
+        <a href="https://github.com/Mohamed-Elwaei/Parallellized-Polynomial-Root-Finder" target="_blank" rel="noopener">
+          <article class="project-card">
+            <img src="assets/polynomial-root-finder.png" alt="Polynomial Root Finder web GUI showing a degree-7 complex polynomial and its roots plotted on the complex plane" class="project-card__image">
+            <h3 class="project-card__title">Parallelized Polynomial Root Finder</h3>
+            <ul class="project-card__bullets">
+              <li>Locates every root of a complex polynomial via the argument principle: Cauchy/Fujiwara bounds establish a root-containing square, winding-number counting recursively subdivides it into quadrants, and multiplicity-aware Newton polishing refines results to machine precision.</li>
+              <li>Ported the winding-number counting step to CUDA, implementing and benchmarking three parallel strategies (per-cell, edge-gather, atomic-scatter) against the C++17 CPU reference, NumPy, and mpmath.</li>
+              <li>Built an interactive Flask + MathLive web GUI for entering complex-coefficient polynomials, switching between CPU/GPU backends, and visualizing roots on the complex plane.</li>
+            </ul>
+            <div class="project-card__tags">
+              <span class="project-tag">C++</span>
+              <span class="project-tag">CUDA</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">Parallel Computing</span>
+            </div>
+          </article>
+        </a>
+
         <a href="https://github.com/Mohamed-Elwaei/Diminished-Java-Compiler" target="_blank" rel="noopener">
           <article class="project-card">
             <h3 class="project-card__title">Compiler for Diminished Java (DJ)</h3>
